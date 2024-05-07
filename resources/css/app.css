@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Name based color */
+.name-color-a {
+    background: #ff7300;
+  }
+  
+  .name-color-b {
+    background: #f39d47;
+  }
+  
+  .name-color-c {
+    background: #1d7632;
+  }
+  
+  .name-color-d {
+    background: #0166a9;
+  }
+  
+  .name-color-e {
+    background: #444791;
+  }
+  
+  .name-color-f {
+    background: #ffd447;
+  }
+  
+  .name-color-g {
+    background: #db4848;
+  }
+  
+  .name-color-h {
+    background: #ff7300;
+  }
+  
+  .name-color-i {
+    background: #f39d47;
+  }
+  
+  .name-color-j {
+    background: #1d7632;
+  }
+  
+  .name-color-k {
+    background: #0166a9;
+  }
+  
+  .name-color-l {
+    background: #444791;
+  }
+  
+  .name-color-m {
+    background: #ffd447;
+  }
+  
+  .name-color-n {
+    background: #db4848;
+  }
+  
+  .name-color-o {
+    background: #ff7300;
+  }
+  
+  .name-color-p {
+    background: #f39d47;
+  }
+  
+  .name-color-q {
+    background: #1d7632;
+  }
+  
+  .name-color-r {
+    background: #0166a9;
+  }
+  
+  .name-color-s {
+    background: #444791;
+  }
+  
+  .name-color-t {
+    background: #ffd447;
+  }
+  
+  .name-color-u {
+    background: #db4848;
+  }
+  
+  .name-color-v {
+    background: #ff7300;
+  }
+  
+  .name-color-w {
+    background: #f39d47;
+  }
+  
+  .name-color-x {
+    background: #1d7632;
+  }
+  
+  .name-color-y {
+    background: #0166a9;
+  }
+  
+  .name-color-z {
+    background: #444791;
+  }
+
+/* Main Container - General */
+:root {
+    --custom-orange: #F2583E;
+    --custom-darkblue: #2f4f4f;
+    --custom-lightblue: #77BED2;
+    --custom-darkgreen: #2B3E42;
+    --custom-white: #D5E1DD;
+    --highlight-white: rgb(236, 236, 236);
+    --soft-red: rgb(255, 100, 100);
+    --whitesmoke: whitesmoke;
+    --white: white;
+    --gray: gray;
+}
+
+
+.main-container {
+    display: grid;
+    grid-template-areas: "aside main";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    background: var(--whitesmoke);
+}
+
+.nav {
+    display: flex;
+    grid-area: nav;
+    background: var(--white);
+    width: 100%;
+    height: 60px;
+    color: black;
+    padding-left: 16px;
+    padding-right: 16px;
+    top: 0;
+    position: sticky;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.218); */
+}
+.main { grid-area: main; }
+.aside { grid-area: aside; }
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    user-select: none;
+}
+
+
+/* Sidebar */
+.sidebar{
+    /* font-family: 'Poppins', sans-serif; */
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--white);
+    transition: all 0.4s ease-in-out;
+    z-index: 100;
+    /* box-shadow: 0px 0px 10px rgba(215, 215, 215, 0.56); */
+}
+
+.sidebar.close{
+    width: 88px;
+}
+
+
+/* Reusable CSS */
+.sidebar .text,
+.sidebar .menu-bar .text{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--gray);
+    white-space: nowrap;
+    display: block;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+/* overflow click */
+.sidebar.close .text
+{
+    opacity: 0;
+}
+.sidebar li a,
+.sidebar li .logout
+{
+    overflow: hidden;
+}
+
+.sidebar .image{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .image-text{
+    overflow: hidden;
+}
+
+.sidebar .image svg{
+    background: var(--custom-darkblue);
+    padding: 2px;
+    border-radius: 6px;
+    fill: var(--white);
+}
+
+.sidebar li{
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icon,
+.sidebar li .text{
+    color: var(--gray);
+}
+
+.sidebar header{
+    position: relative;
+}
+
+.sidebar .image-text svg{
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar header .image-text{
+    display: flex;
+    align-items: center;
+}
+
+header .image-text .header-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text .name{
+    font-weight: 400;
+}
+.header-text .profession{
+    margin-top: -2px;
+    font-weight: 200;
+    font-size: small;
+}
+
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    height: 25px;
+    width: 25px;
+    transform: translateY(-50%) rotate(180deg);
+    background-color: var(--custom-darkblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar.close header .toggle{
+    transform: translateY(-50%);
+}
+.sidebar header .toggle:hover{
+    background: var(--custom-orange);
+    color: black;
+}
+
+.sidebar .bottom-content li form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar li a,
+.sidebar li .logout{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    color: var(--soft-red);
+}
+
+.sidebar li a:hover{
+    background: var(--custom-darkblue);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: var(--white);
+}
+
+.sidebar li .logout .icon,
+.sidebar li .logout .text{
+    color: var(--soft-red);
+}
+
+.sidebar li .logout:hover .icon,
+.sidebar li .logout:hover .text{
+    color: var(--white);
+}
+.sidebar li .logout:hover{
+    background: var(--soft-red)
+}
+
+.sidebar .menu-bar{
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+/* MAIN CONTENT */
+.main.home{
+    background-color: var(--highlight-white);
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.sidebar li a.active{
+    background: var(--highlight-white);
+}
+
+.sidebar li a.active .icon,
+.sidebar li a.active .text{
+    color: var(--gray);
+}
